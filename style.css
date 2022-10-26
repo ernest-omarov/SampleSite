@@ -131,6 +131,7 @@ body {
 .concept-block {
   width: 50%;
   height: 840px;
+  position: relative;
 }
 
 .concept-block:first-child {
@@ -141,6 +142,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.concept-block:last-child {
+  position: inherit;
 }
 
 .concept-title-first {
@@ -179,7 +184,6 @@ body {
   animation-name: scrolling;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  margin-top: 50px;
 }
 
 .scroll_block {
@@ -188,26 +192,28 @@ body {
   height: 100px;
   background-color: #f0f0f0;
   position:absolute;
-  left: 130px;
+  left: 0;
   border-radius: 10px;
 }
 
 .info-box {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
 .info-inside-box {
   padding-top: 50px;
-  margin-left: 125px;
+  margin-left: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .info-inside-box:nth-child(2) {
-  margin: 0;
+  margin-right: 150px;
+  margin-left: 0;
 }
 
 .info-title {
@@ -242,7 +248,7 @@ body {
   font-size: 15px;
   font-weight: 300;
   transition: all .3s;
-  background-color: #f0f0f0;
+  background-color: #ffff;
 }
 
 .info-button:hover {
@@ -250,7 +256,7 @@ body {
   color: #ffff;
 }
 
-.info-string-box {
+.info-arrow-box {
   padding: 10px 15px;
   padding-left: 10px;
   display: flex;
@@ -260,5 +266,191 @@ body {
   border-bottom-right-radius: 10px;
   border: 1px solid #000;
   border-left: none;
-  background-color: #f0f0f0;
+  background-color: #ffff;
+}
+
+.robo-arm-box {
+  display: flex;
+  align-items: center;
+  height: 980px;
+  background-image: url("https://static.wixstatic.com/media/c837a6_870aaf57c1d9484a9a6ee57f2465df75~mv2.jpg/v1/fill/w_1600,h_980,al_r,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_870aaf57c1d9484a9a6ee57f2465df75~mv2.jpg");
+  background-attachment: fixed;
+}
+
+@keyframes robo-arm-scrolling-box {
+  to {
+    margin-top: 0;
+  }
+}
+
+.robo-arm-info-animation {
+  animation-name: robo-arm-scrolling-box;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.robo-arm-info {
+  background-color: #000;
+  padding: 50px 100px 50px 50px;
+  margin-left: 300px;
+  border-radius: 10px;
+  width: 500px;
+  height: 650px;
+  margin-top: 300px;
+}
+
+.robo-arm-info-inside-box {
+  border-left: 1px solid #fff;
+  padding: 0 0 0 50px;
+  position: relative;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.robo-title {
+  margin: 0;
+  color: #ffff;
+  font-size: 17px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.robo-title-center {
+  color: #ffff;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.robo-text {
+  margin: 0;
+  color: #ffff;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.robo-arm-button-box {
+  margin: 0;
+}
+
+.robo-arm-button {
+  background-color: #000;
+  color: #ffff;
+  border-color: #ffff;
+}
+
+.robo-arm-button:hover {
+  background-color: #ffff;
+  color: #000;
+}
+
+.robo-arm-arrow-box {
+  border-color: #ffff;
+  background-color: #000;
+}
+
+.robo-arrow {
+  color: #ffff;
+}
+
+@keyframes scroll-robo-arm {
+  to {
+    margin-top: 100px;
+  }
+}
+
+.robo-arm-animation {
+  animation-name: scroll-robo-arm;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.robo-arm-scroll {
+  margin-top: 300px;
+}
+
+.num-outside-main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.autobo-numbers {
+  height: 750px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.num-block-one {
+  width: 400px;
+}
+
+.num-second-block {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  column-gap: 100px;
+  margin-right: 200px;
+  margin-top: 40px;
+}
+
+.num-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+
+.marketing-block {
+  width: 200px;
+}
+
+.marketing-block-inside {
+  margin-bottom: 17px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.marketing-block-inside-invisible {
+  opacity: 1;
+}
+
+.marketing-block-title {
+  position: relative;
+  padding-top: 10px;
+  border-top: 1px solid #000;
+}
+
+.marketing-block-title-inside {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.scroll_marketing {
+  position: absolute;
+  margin-left: 100px;
+  background-color: #000;
+  top: -4px;
+  left: 0;
+  width: 25px;
+  height: 3px;
+  border-radius: 0;
+}
+
+@keyframes scroll-marketing {
+  to {
+    margin: 0;
+  }
+}
+
+.scroll-marketing-animation {
+  animation-name: scroll-marketing;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
